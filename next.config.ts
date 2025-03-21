@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
-
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    turbo: {
+      dev: {
+        sourceMaps: true,
+      },
+    } as any, // Temporary workaround
+  },
 };
-
-export default nextConfig;
